@@ -7,7 +7,7 @@ To design and simulate a 4-bit Ripple Carry Adder using Verilog HDL with a task 
 Computer with Vivado or any Verilog simulation software. Verilog HDL compiler.
 
 ## Verilog code for 4-bit Ripple carry adder
-
+```
 module ripple_adders (
     input [3:0] A, 
     input [3:0] B, 
@@ -40,8 +40,9 @@ module ripple_adders (
     assign Cout = cout_final;
 
 endmodule
-
+```
 ## Testbench code for 4-bit Ripple carry adder
+```
 module ripple_adder_tb;
 
     reg [3:0] A, B;
@@ -72,12 +73,13 @@ module ripple_adder_tb;
         $monitor("Time = %0t | A = %b | B = %b | Cin = %b | Sum = %b | Cout = %b",
                  $time, A, B, Cin, Sum, Cout);
     end
-
+```
 ## Output
 ![Screenshot (38)](https://github.com/user-attachments/assets/2f922b86-56a7-4581-a399-0502974fd477)
 
 
 ## Verilog code for 4-bit Ripple counter
+```
 module ripple_counter_4bit (
 input clk,           // Clock signal
 input reset,         // Reset signal
@@ -101,8 +103,9 @@ always @(posedge clk or posedge reset) begin
 end
 
 endmodule
-
+```
 ## Testbench code for 4-bit Ripple counter
+```
 module ripple_counter_4bit_tb;
 
 reg clk;
@@ -130,13 +133,12 @@ initial begin
     // Run simulation for 200ns
     #200 $stop;
 end
-
 initial begin
     $monitor("Time = %0t | Reset = %b | Q = %b", $time, reset, Q);
 end
 
 endmodule
-
+```
 ## Output
 ![Screenshot (39)](https://github.com/user-attachments/assets/6efadb71-92bc-44d7-b99a-1e61ed494c36)
 
